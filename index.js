@@ -14,7 +14,7 @@ app.use(express.json());
 mongoose 
 .connect(process.env.MONGO_URI)
 .then(()=>  console.log("✔️MongoDB connection Successful!"))
-.catch((err)=> console.error("❌ Failed to connect!!"));
+.catch((err)=> console.error("❌ Failed to connect!!",err));
 
 
 app.get('/', (req, res) => {
